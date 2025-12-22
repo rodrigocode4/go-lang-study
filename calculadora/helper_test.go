@@ -1,12 +1,14 @@
 package calculadora
 
-import "testing"
+import (
+	"testing"
+)
 
-func Assert(t *testing.T, resultado int, esperado int) {
+func Assert[T Number](t *testing.T, resultado, esperado T) {
 	t.Helper()
 
 	if resultado != esperado {
-		t.Errorf("resutado: '%d', esperado: '%d'", resultado, esperado)
+		t.Errorf("resutado: '%v', esperado: '%v'", resultado, esperado)
 	}
 
 }

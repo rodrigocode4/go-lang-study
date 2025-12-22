@@ -1,17 +1,21 @@
 package calculadora
 
-func Soma(a, b int) int {
+type Number interface {
+	int | float64
+}
+
+func Soma[T Number](a, b T) T {
 	return a + b
 }
 
-func Subtrai(a, b int) int {
+func Subtrai[T Number](a, b T) T {
 	return a - b
 }
 
-func Multiplica(a, b int) int {
+func Multiplica[T Number](a, b T) T {
 	return a * b
 }
 
-func Divide(a, b int) int {
+func Divide[T Number](a, b T) T {
 	return a / b
 }
