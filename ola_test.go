@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestOla(t *testing.T) {
-	resutado := Ola()
+	resutado := Ola("Mundo!")
 	esperado := "Olá Mundo!"
 
 	if resutado != esperado {
