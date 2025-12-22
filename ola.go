@@ -7,5 +7,9 @@ func main() {
 }
 
 func Ola(msg string) string {
-	return "Olá " + msg
+	if msg == "" {
+		msg = "mundo"
+	}
+
+	return "Olá, " + msg
 }
