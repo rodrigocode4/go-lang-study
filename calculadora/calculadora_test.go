@@ -59,11 +59,21 @@ func TestSoma(t *testing.T) {
 		Assert(t, resultado, esperado)
 	})
 
-	t.Run("soma array", func(t *testing.T) {
-		numeros := [5]int{1, 2, 3, 4, 5}
+	t.Run("soma lista com 5 numeros", func(t *testing.T) {
+		numeros := []int{1, 2, 3, 4, 5}
 
 		esperado := SomaLista(numeros)
 		resultado := 15
+
+		Assert2(t, resultado, esperado, numeros)
+
+	})
+
+	t.Run("soma lista com qualquer tamanho", func(t *testing.T) {
+		numeros := []int{1, 2, 3, 4}
+
+		esperado := SomaLista(numeros)
+		resultado := 10
 
 		Assert2(t, resultado, esperado, numeros)
 

@@ -20,7 +20,7 @@ func Divide[T Number](a, b T) T {
 	return a / b
 }
 
-func SomaLista(numeros [5]int) int {
+func SomaLista(numeros []int) int {
 	var soma int
 	for _, num := range numeros {
 		soma += num
